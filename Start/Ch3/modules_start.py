@@ -2,26 +2,33 @@
 # Working with modules of code
 
 # import the math module, which contains features for working with mathematics
+import math
 
 
 # import a specific part of the module so you can refer to it more easily
+from math import pi
 
 
 # import a module and give it a different name
+import random as r
 
 
 # the math module contains lots of pre-built functions
+# print("The square root of 256 is", math.sqrt(256))
 
 
 # in addition to functions, some modules contain useful constants 
+# print("Pi is", pi) # When importing specific parts, there is no need to type the math prefix
 
 
 # Generate a random number between 100 and 200
-
+# print(r.randint(100,200))
 
 # try some of the math functions for yourself here:
+print("2 to the power of 3 is", math.pow(2,3))
 
 # Use the 3rd party tabulate module to print tabulated data:
+from tabulate import tabulate
 
 # Sample data
 data = [
@@ -32,3 +39,5 @@ data = [
 ]
 
 # Create a formatted table
+
+print(tabulate(data, headers="firstrow", tablefmt="fancy_grid"))
