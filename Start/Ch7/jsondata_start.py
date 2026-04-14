@@ -2,13 +2,18 @@
 # Example file for parsing and processing JSON
 #
 
-import urllib.request 
+import urllib.request as ur
+import json
 
 
 # Open the URL and read the data
-
+web_url = ur.urlopen("https://uselessfacts.jsph.pl/api/v2/facts/random")
+print("Result code:", web_url.getcode())
 
 # Read the JSON data from the source
-
+data = web_url.read()
+# print(data)
 
 # Print the content of the 'text' field
+theJSON = json.loads(data) # Converts the JSON texts into Python dictionary object
+print(theJSON["text"])
