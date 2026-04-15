@@ -4,6 +4,6 @@
 import urllib.request as ur
 
 web_url = ur.urlopen("http://www.example.com")
-print("Reuslt code:", web_url.getcode())
+print("Result code:", web_url.getcode())
 data = web_url.read()
 print(data)

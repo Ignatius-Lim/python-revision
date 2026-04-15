@@ -34,4 +34,4 @@ days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 
 # using the enumerate() function to get an index and an item
 for i, d in enumerate(days):
-  print(i+1, d)
+  print(i, d)
